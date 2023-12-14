@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/11 18:04:32 by gcampbel          #+#    #+#             */
+/*   Updated: 2023/12/11 20:21:20 by gcampbel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* allocates memory to array of nmemb contents of size bytes */
+
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*tmp;
+
+	tmp = malloc(nmemb * size);
+	if (!tmp)
+		return (0);
+	else
+		ft_bzero(tmp, size);
+	return (tmp);
+}
