@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 21:30:03 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/21 22:24:22 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/22 23:43:49 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	del(lst->content);
 	free(lst);
+	lst = NULL;
 }
-
 /*
 static void	printlst(t_list *lst)
 {
-	while (lst)
+	t_list	*tmp = lst;
+
+	while (tmp)
 	{
-		printf("%s", (char *)lst->content);
-		lst = lst->next;
+		printf("%s", (char *)tmp->content);
+		tmp = tmp->next;
 	}
 }
-
 static void	wipe(void *content)
 {
 	free(content);
@@ -41,11 +42,11 @@ static void	wipe(void *content)
 
 int	main(void)
 {
-	char	h[] = "hello";
-	char	w[] = " world";
+	char	*h = strdup("hello");
+	char	*w = strdup(" world");
+	printf("The first element is: \"%s\"\n", h);
+	printf("The second element is: \"%s\"\n", w);
 	t_list	*l1 = ft_lstnew(h);
-	printf("The first element is: \"%s\n\"", h);
-	printf("The second element is: \"%s\n\"", w);
 	t_list	*l2 = ft_lstnew(w);
 	ft_lstadd_back(&l1, l2);
 	printf("The combined list is: \"");
@@ -55,7 +56,16 @@ int	main(void)
 	printlst(l2);
 	printf("\"\n");
 	ft_lstdelone(l2, wipe);
-	printf("The post-deletion list is: \"");
-	printlst(l1);
-	printf("\"\n");
+	printf("The post-deletion list is: \"%s\"\n", (char *)l1->content);
+}*/
+/*
+int	main(void)
+{
+	char	*hw = strdup("hello world");
+
+	t_list	*l1 = ft_lstnew(hw);
+	printf("%s\n", (char *)l1->content);
+//	printlst(l1);
+	ft_lstdelone(l1, &wipe);
+//	printlst(l1);
 }*/

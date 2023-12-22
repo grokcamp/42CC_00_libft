@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 22:46:10 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/21 19:28:14 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/22 23:00:37 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_lower(unsigned int i, char *c)
 
 int	main(void)
 {
-	char	str[] = "HELLO WORLD";
+	char	*str = strdup("HELLO WORLD");
 
 	printf("Original string was: %s\n", str);
 	ft_striteri(str, ft_lower);
