@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 18:48:45 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/11 19:52:29 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/24 22:39:27 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 
 	len = ft_strlen(s);
-	str = malloc(len * sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	ft_memcpy(str, s, len);
+	str[len] = '\0';
 	return (str);
 }
 /*

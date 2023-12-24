@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 00:18:46 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/23 00:39:42 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:42:58 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (box);
 }
-
+/*
 static void	wipe(void *content)
 {
 	free(content);
@@ -84,4 +84,4 @@ int     main(void)
         printf("The new list contains: \n");
         lstprint(new);
 	ft_lstclear(&new, &wipe);
-}
+}*/

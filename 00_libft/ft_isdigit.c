@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 22:26:56 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/11 19:45:26 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/24 22:31:03 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 
 int	ft_isdigit(int c)
 {
-	if (0 <= c && c <= 9)
+	if ('0' <= c && c <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 /*
 int	main(void)
