@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 21:30:03 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/22 23:43:49 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:48:17 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	del(lst->content);
 	free(lst);
-	lst = NULL;
 }
 /*
 static void	printlst(t_list *lst)
@@ -57,7 +56,8 @@ int	main(void)
 	printf("\"\n");
 	ft_lstdelone(l2, wipe);
 	printf("The post-deletion list is: \"%s\"\n", (char *)l1->content);
-}*/
+}
+*/
 /*
 int	main(void)
 {

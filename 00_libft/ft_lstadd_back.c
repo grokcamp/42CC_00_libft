@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 21:06:18 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/21 21:28:54 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:47:39 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	final = ft_lstlast(*lst);
 	if (!final)
 		*lst = new;
-	final->next = new;
+	else
+		final->next = new;
 }
-
 /*
 static void     printlst(t_list *lst)
 {
@@ -37,7 +37,17 @@ static void     printlst(t_list *lst)
                 lst = lst->next;
         }
 }
+int	main(void)
+{
+	char	*s1 = strdup("hello world");
 
+	t_list	*l1 = NULL;
+	t_list	*l2 = ft_lstnew(s1);
+	ft_lstadd_back(&l1, l2);
+	printlst(l1);
+}
+*/
+/*
 int     main(void)
 {
         char    s1[] = "gal-o ";
@@ -54,4 +64,5 @@ int     main(void)
         printf("The combined list is: \"");
         printlst(l1);
 	printf("\"\n");
+	ft
 }*/

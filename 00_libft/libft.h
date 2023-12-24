@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 18:14:50 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/23 00:18:04 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/24 18:51:46 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -70,5 +70,6 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 void    ft_lstdelone(t_list *lst, void (*del)(void *));
 void    ft_lstclear(t_list **lst, void (*del)(void *));
 void    ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

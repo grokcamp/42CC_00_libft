@@ -6,7 +6,7 @@
 /*   By: gcampbel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:32:34 by gcampbel          #+#    #+#             */
-/*   Updated: 2023/12/22 20:48:05 by gcampbel         ###   ########.fr       */
+/*   Updated: 2023/12/23 22:32:09 by gcampbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-
+/*
 static void	printlst(t_list *lst)
 {
 	while (lst)
@@ -48,4 +48,4 @@ int	main(void)
 	t_list	*new = ft_lstnew(str2);
 	ft_lstadd_front(&lst, new);
 	printlst(lst);
-}
+}*/
